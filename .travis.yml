@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t vite-test -f Dockerfile.dev .
+  - docker build -f Dockerfile.dev -t vite-test .
 
 script:
   - docker run vite-test npm run test
